@@ -17,7 +17,8 @@ body {
   font-weight:800;
 }
 
-/* Order matters when chaining selectors.  */ 
+/* Order matters when grouping selectors.  */ 
+/* It also matters when it comes to the order that classes are read.  */ 
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -31,14 +32,14 @@ body {
   font-weight: bold;
 } 
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
-
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+}
+
+.text .child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
 }
